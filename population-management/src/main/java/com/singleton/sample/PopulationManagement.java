@@ -3,7 +3,7 @@ package com.singleton.sample;
 import java.util.Vector;
 
 public class PopulationManagement {
-    private  Vector<Citizen> Population = new Vector<Citizen>();
+    private Vector<Citizen> Population = new Vector<Citizen>();
     private static PopulationManagement instance;
 
     private PopulationManagement(){}
