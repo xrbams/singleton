@@ -13,7 +13,7 @@ public class App
     }
     
     static private void client1() { // Want to add new Citizen
-        PopulationManagement pm = new PopulationManagement();
+        PopulationManagement pm = PopulationManagement.getInstance();
 
         System.out.println("\n\rClient 1: want to add add new citizen");
         
@@ -26,7 +26,7 @@ public class App
     }
 
     static private void client2() { // Want to receive population infos
-        PopulationManagement pm = new PopulationManagement();
+        PopulationManagement pm = PopulationManagement.getInstance();
         System.out.println("\n\rClient 2: Want to receive population infos");
         pm.showPopulation();
     }

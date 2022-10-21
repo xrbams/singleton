@@ -3,10 +3,14 @@ package com.singleton.sample;
 import java.util.Vector;
 
 public class PopulationManagement {
-    private static Vector<Citizen> Population = new Vector<Citizen>();
-    
-    public PopulationManagement(){
+    private  Vector<Citizen> Population = new Vector<Citizen>();
+    private static PopulationManagement instance;
 
+    private PopulationManagement(){}
+
+    public static PopulationManagement getInstance(){
+        if ( instance == null ) instance = new PopulationManagement();
+        return instance;
     }
 
     public void addNewCitizen(Citizen newCitizen) {
